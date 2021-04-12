@@ -16,6 +16,7 @@ public class EspnLoginTest extends BaseTests {
     @Test
     @Parameters({"username", "password"})
     public void testEspnSuccessfulLogin(String username, String password){
+        logger.info("·····················Starting Login Scenario·····················");
         logger.info(">>>>> Accesing homepage");
         EspnHomePage home = getEspnHomePage();
         logger.info(">>>>> Accessing to login");
@@ -26,6 +27,7 @@ public class EspnLoginTest extends BaseTests {
         EspnWelcomePage welcomePage = loginPage.submitLoginForm(username, password);
         welcomePage.hoverProfileAvatar();
         logger.info(">>>>> Validating that the user is actually logged in");
+        logger.info("·····················Finishing Login Scenario·····················");
         Assert.assertEquals(welcomePage.getLogOutLink().getText(), "Log Out");
     }
 }

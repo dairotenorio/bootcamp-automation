@@ -12,6 +12,7 @@ public class EspnLogoutTest extends BaseTests {
     @Test
     @Parameters({"username2", "password2"})
     public void testEspnSuccessfulLogout(String username2, String password2){
+        logger.info("·····················Starting Logout Scenario·····················");
         logger.info(">>>>> Accesing homepage");
         EspnHomePage home = getEspnHomePage();
         logger.info(">>>>> Accessing to login");
@@ -24,6 +25,7 @@ public class EspnLogoutTest extends BaseTests {
         logger.info(">>>>> Logging out");
         welcomePage.logout();
         logger.info(">>>>> Validating that the user is actually logged out");
+        logger.info("·····················Finishing Login Scenario·····················");
         Assert.assertEquals(home.goToLoginButtonDisplayed(), true);
     }
 

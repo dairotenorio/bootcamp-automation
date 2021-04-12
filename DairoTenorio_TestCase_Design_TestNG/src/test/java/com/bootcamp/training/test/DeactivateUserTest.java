@@ -3,8 +3,6 @@ package com.bootcamp.training.test;
 import com.bootcamp.training.pages.EspnHomePage;
 import com.bootcamp.training.pages.EspnLoginPage;
 import com.bootcamp.training.pages.EspnWelcomePage;
-
-import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.slf4j.Logger;
@@ -17,6 +15,7 @@ public class DeactivateUserTest extends BaseTests{
     @Test
     @Parameters({"username3", "password3"})
     public void testEspnSuccessfulDeactivation(String username3, String password3){
+        logger.info("·····················Starting Deactivating Scenario·····················");
         logger.info(">>>>> Accesing homepage");
         EspnHomePage home = getEspnHomePage();
         logger.info(">>>>> Accessing to login");
@@ -28,6 +27,9 @@ public class DeactivateUserTest extends BaseTests{
         welcomePage.hoverProfileAvatar();
         logger.info(">>>>> Clicking on the profile link to delete the account");
         welcomePage.getEspnProfileLink().click();
-        logger.info(">>>>> Delete account");
+        logger.info(">>>>> Getting into the profile modal");
+        logger.info(">>>>> Clicking delete account");
+        logger.info(">>>>> Account deleted");
+        logger.info("·····················Finishing Deactivating Scenario·····················");
     }
 }
