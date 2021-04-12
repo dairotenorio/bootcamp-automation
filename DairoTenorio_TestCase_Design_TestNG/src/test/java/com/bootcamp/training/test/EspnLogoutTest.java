@@ -6,8 +6,12 @@ import com.bootcamp.training.pages.EspnHomePage;
 import org.testng.annotations.Parameters;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class EspnLogoutTest extends BaseTests {
+
+    Logger logger = LoggerFactory.getLogger(EspnLogoutTest.class);
 
     @Test
     @Parameters({"username2", "password2"})

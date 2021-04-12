@@ -10,7 +10,7 @@ import org.slf4j.LoggerFactory;
 
 public class DeactivateUserTest extends BaseTests{
 
-    Logger logger = LoggerFactory.getLogger(BaseTests.class);
+    Logger logger = LoggerFactory.getLogger(DeactivateUserTest.class);
     
     @Test
     @Parameters({"username3", "password3"})
