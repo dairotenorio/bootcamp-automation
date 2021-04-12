@@ -2,8 +2,11 @@ package com.bootcamp.training.test;
 import com.bootcamp.training.utils.MyDriver;
 import com.bootcamp.training.pages.EspnHomePage;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +22,22 @@ public class BaseTests {
     @BeforeSuite
     public void BeforeSuite(){
         logger.info(">>>>> Precondition: valid username and password for ESPN");
+        logger.info(">>>>> Starting suite of tests for ESPN");
+    }
+
+    @AfterSuite
+    public void AfterSuite(){
+        logger.info(">>>>> Ending suite of tests for ESPN");
+    }
+
+    @BeforeTest
+    public void beforeTest(){
+        logger.info(">>>>> Starting test");
+    }
+
+    @AfterTest
+    public void afterTest(){
+        logger.info(">>>>> Ending test");
     }
 
     @BeforeMethod

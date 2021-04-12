@@ -13,8 +13,15 @@ public class EspnWelcomePage extends BasePage{
     @FindBy(className = "small")
     private WebElement logOutLink;
 
+    @FindBy(linkText = "ESPN Profile")
+    private WebElement espnProfileLink;
+
     public WebElement getLogOutLink (){
         return logOutLink;
+    }
+
+    public WebElement getEspnProfileLink (){
+        return espnProfileLink;
     }
 
     public void logout (){

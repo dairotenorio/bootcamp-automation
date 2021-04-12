@@ -5,11 +5,14 @@
   <parameter name="password" value="testing123"/>
   <parameter name="username2" value="dairotenorio@gmail.com"/>
   <parameter name="password2" value="testing123"/>
+  <parameter name="username3" value="dairotenorio@gmail.com"/>
+  <parameter name="password3" value="testing123"/>
   <parameter name="browser" value="chrome"/>
   <test name="ESPN Page Test">
     <classes>
-       <class name="com.bootcamp.training.test.EspnLoginTest" />
-       <class name="com.bootcamp.training.test.EspnLogoutTest" />
+      <class name="com.bootcamp.training.test.EspnLoginTest" />
+      <class name="com.bootcamp.training.test.EspnLogoutTest" />
+       <class name="com.bootcamp.training.test.DeactivateUserTest" />
     </classes>
   </test>
 </suite>
