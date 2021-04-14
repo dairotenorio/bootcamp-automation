@@ -11,7 +11,10 @@ public class EspnHomePage extends BasePage {
         driver.get("https://www.espn.com/?src=com&adblock=true");
     }
 
-    @FindBy(css = "#sideLogin-left-rail button.button-alt.med")
+    @FindBy(css = "button.button.med:not(.button-alt.med)")
+    private WebElement gotToSignUpButton;
+
+    @FindBy(css = "button.button-alt.med")
     private WebElement goToLoginButton;
 
     public WebElement getGoToLoginButton (){

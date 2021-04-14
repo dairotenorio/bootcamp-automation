@@ -22,7 +22,7 @@ public abstract class BasePage {
         driver = pDriver;
     }
 
-    @FindBy(id = "global-user-trigger")
+    @FindBy(css = "#global-user-trigger")
     private WebElement profileAvatar;
 
     public void hoverProfileAvatar(){

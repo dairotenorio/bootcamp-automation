@@ -21,7 +21,7 @@ public class EspnLoginPage extends BasePage{
     private WebElement passwordInput;
 
     @FindBy(css = "button[type='submit']")
-    private WebElement submitButton;
+    private WebElement loginSubmitButton;
 
     public void switchToLoginIFrame(){
        getDriver().switchTo().frame(loginIFrame);
@@ -30,8 +30,8 @@ public class EspnLoginPage extends BasePage{
     public EspnWelcomePage submitLoginForm(String username, String password){
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password);
-        getWait().until(ExpectedConditions.elementToBeClickable(submitButton));
-        submitButton.click();
+        getWait().until(ExpectedConditions.elementToBeClickable(loginSubmitButton));
+        loginSubmitButton.click();
         return new EspnWelcomePage(getDriver());
     }
 

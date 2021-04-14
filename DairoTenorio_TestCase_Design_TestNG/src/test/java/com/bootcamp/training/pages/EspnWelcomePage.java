@@ -10,10 +10,10 @@ public class EspnWelcomePage extends BasePage{
         super(driver);
     }
 
-    @FindBy(className = "small")
+    @FindBy(css = ".small")
     private WebElement logOutLink;
 
-    @FindBy(linkText = "ESPN Profile")
+    @FindBy(css = ".account-management > li:nth-child(5) > a")
     private WebElement espnProfileLink;
 
     public WebElement getLogOutLink (){
